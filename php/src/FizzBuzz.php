@@ -8,7 +8,7 @@ class FizzBuzz
     {
         if ($number === 5) return 'Buzz';
 
-        if ($number === 3 || $number === 6 || $number === 9) return 'Fizz';
+        if ($number % 3 === 0) return 'Fizz';
 
         return (string) $number;
     }
