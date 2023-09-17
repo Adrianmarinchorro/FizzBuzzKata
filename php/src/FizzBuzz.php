@@ -9,9 +9,7 @@ class FizzBuzz
 
         if ($number === 3) return 'Fizz';
 
-        if($number == 1) {
-            return '1';
-        }
+        if ($number == 1) return '1';
 
         return '2';
     }

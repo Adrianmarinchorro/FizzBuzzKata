@@ -7,33 +7,25 @@ use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase
 {
-    /** @test */
-    public function given_1_then_return_1(): void
+
+    public function convertion() {
+        return [
+            'given_1_then_return_1' => [1, '1'],
+            'given_2_then_return_2' => [2, '2'],
+            'given_3_then_return_fizz' => [3, 'Fizz']
+        ];
+    }
+
+    /** @test
+     * @dataProvider convertion
+     */
+    public function given_a_number_then_return_fizz_or_buzz_or_fizzbuzz_or_the_same_number_as_a_string($number, $expected): void
     {
         $game = new FizzBuzz();
 
-        $result = $game->convert(1);
+        $result = $game->convert($number);
 
-        self::assertEquals('1', $result);
+        self::assertEquals($expected, $result);
     }
 
-    /** @test */
-    public function given_2_then_return_2(): void
-    {
-        $game = new FizzBuzz();
-
-        $result = $game->convert(2);
-
-        self::assertEquals('2', $result);
-    }
-
-    /** @test */
-    public function given_3_then_return_fizz(): void
-    {
-        $game = new FizzBuzz();
-
-        $result = $game->convert(3);
-
-        self::assertEquals('Fizz', $result);
-    }
 }
