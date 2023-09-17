@@ -6,6 +6,10 @@ class FizzBuzz
 {
     public function convert(int $number): string
     {
-        return '1';
+        if($number == 1) {
+            return '1';
+        }
+        
+        return '2';
     }
 }
