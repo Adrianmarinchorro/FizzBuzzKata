@@ -26,4 +26,14 @@ class FizzBuzzTest extends TestCase
 
         self::assertEquals('2', $result);
     }
+
+    /** @test */
+    public function given_3_then_return_fizz(): void
+    {
+        $game = new FizzBuzz();
+
+        $result = $game->convert(3);
+
+        self::assertEquals('Fizz', $result);
+    }
 }
