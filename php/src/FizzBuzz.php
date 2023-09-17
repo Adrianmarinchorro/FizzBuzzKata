@@ -6,12 +6,27 @@ class FizzBuzz
 {
     public function convert(int $number): string
     {
-        if ($number % 3 === 0 && $number % 5 === 0) return 'FizzBuzz';
+        if ($this->isMultipleOf3And5($number)) return 'FizzBuzz';
         
-        if ($number % 5 === 0) return 'Buzz';
+        if ($this->isMultipleOf5($number)) return 'Buzz';
 
-        if ($number % 3 === 0) return 'Fizz';
+        if ($this->isMultipleOf3($number)) return 'Fizz';
 
         return (string) $number;
+    }
+
+    public function isMultipleOf3And5(int $number): bool
+    {
+        return $number % 3 === 0 && $number % 5 === 0;
+    }
+
+    public function isMultipleOf5(int $number): bool
+    {
+        return $number % 5 === 0;
+    }
+
+    public function isMultipleOf3(int $number): bool
+    {
+        return $number % 3 === 0;
     }
 }

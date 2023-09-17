@@ -20,6 +20,8 @@ class FizzBuzzTest extends TestCase
             'given_10_then_return_buzz' => [10, 'Buzz'],
             'given_12_then_return_buzz' => [12, 'Fizz'],
             'given_15_then_return_fizzbuzz' => [15, 'FizzBuzz'],
+            'given_18_then_return_fizz' => [18, 'Fizz'],
+            'given_30_then_return_fizzbuzz' => [30, 'FizzBuzz'],
         ];
     }
 
