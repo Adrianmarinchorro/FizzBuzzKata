@@ -14,6 +14,7 @@ class FizzBuzzTest extends TestCase
             'given_2_then_return_2' => [2, '2'],
             'given_3_then_return_fizz' => [3, 'Fizz'],
             'given_4_then_return_4' => [4, '4'],
+            'given_5_then_return_buzz' => [5, 'Buzz'],
         ];
     }
 
