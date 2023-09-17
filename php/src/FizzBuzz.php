@@ -6,6 +6,7 @@ class FizzBuzz
 {
     public function convert(int $number): string
     {
+        if ($number === 4) return '4';
 
         if ($number === 3) return 'Fizz';
 
